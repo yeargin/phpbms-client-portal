@@ -1,0 +1,44 @@
+/* Override some defaults */
+html, body {
+}
+body {
+	padding-top: 100px;
+}
+.container > footer p {
+	text-align: center;
+}
+.container {
+	width: 820px; /* downsize to 14 columns. */
+}
+
+.topbar input {
+	border: 0;
+}
+.topbar input:hover {
+	color: #000000;
+}
+
+.actions {
+	border: none;
+	background: none;
+}
+
+/* Footer */
+footer {
+	margin-top: 17px;
+	margin-bottom: 2em; 
+}
+
+td.decimal {
+	text-align: right;
+}
+
+/* Miscellaneous Tweaks */
+.meows { top: 40px; }
+.topbar-inner, .topbar .fill { background-color: #FFFFFF; background-image: none; }
+.topbar a { color: #999999; text-shadow: none; }
+.topbar .nav a:hover { color: #0000ff; }
+
+/* Profiler */
+#codeigniter_profiler legend { padding-left: 0.5em }
+#codeigniter_profiler code { line-height: 2em; }

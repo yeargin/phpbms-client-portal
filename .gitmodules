@@ -1,0 +1,6 @@
+[submodule "application/third_party/tcpdf"]
+	path = application/third_party/tcpdf
+	url = git://tcpdf.git.sourceforge.net/gitroot/tcpdf/tcpdf
+[submodule "assets/bootstrap"]
+	path = assets/bootstrap
+	url = git://github.com/twitter/bootstrap.git

@@ -1,0 +1,14 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+// Application
+$config['application_name'] = 'Worldwide Widgets - Client Portal';
+$config['application_credit'] = 'Worldwide Widget';
+$config['application_logo'] = 'http://dummyimage.com/200x60/bababa/ffffff&text=LOGO';
+$config['application_locale'] = 'en_US';
+
+// Contact Form
+$config['contact_email_recipient'] = 'user@example.com';
+
+// PayPal Information
+$config['paypal_payments_recipient'] = 'paypal@example.com';
+$config['paypal_logo_url'] = 'http://dummyimage.com/200x60/bababa/ffffff&text=LOGO';
