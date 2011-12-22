@@ -3,9 +3,8 @@ Introduction
 
 This is a [CodeIgniter](http://codeigniter.com) project to provide a client portal for the [phpBMS](http://phpbms.org) platform. While phpBMS provides the means to add a username and password to a client record, it does not currently do anything with that information (a client cannot use those credentials to authenticate with phpBMS). When this project is installed alongside phpBMS, clients can:
 
-* View orders
-* View quotes
-* View invoices
+* View orders, quotes and invoices
+* Download orders, quotes and invoices as PDF files (see section below)
 * See balance due on invoices
 * View accounts receivable entries and status
 * View contact information for account
