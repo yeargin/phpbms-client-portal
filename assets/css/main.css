@@ -39,6 +39,9 @@ td.decimal {
 .topbar a { color: #999999; text-shadow: none; }
 .topbar .nav a:hover { color: #0000ff; }
 
+/* Printer Friendly */
+.print { display: none; }
+
 /* Profiler */
 #codeigniter_profiler legend { padding-left: 0.5em }
 #codeigniter_profiler code { line-height: 2em; }

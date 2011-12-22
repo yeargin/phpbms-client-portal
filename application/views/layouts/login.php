@@ -10,13 +10,9 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title><?php echo isset($page_title) ? $page_title : $this->config->item('application_name'); ?></title>
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap/bootstrap.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/bootstrap.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/jquery.meow/jquery.meow.css'); ?>" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-	<script src="<?php echo base_url('assets/css/bootstrap/js/bootstrap-modal.js'); ?>"> </script>
-	<script src="<?php echo base_url('assets/css/bootstrap/js/bootstrap-dropdown.js'); ?>"> </script>
-	<script src="<?php echo base_url('assets/css/bootstrap/js/bootstrap-twipsy.js'); ?>"> </script>
-  <script src="<?php echo base_url('assets/css/bootstrap/js/bootstrap-scrollspy.js'); ?>"> </script>
 	<script src="<?php echo base_url('assets/js/jquery.meow/jquery.meow.js'); ?>"> </script>
 	<script src="<?php echo base_url('assets/js/global.js'); ?>"> </script>
 
@@ -30,8 +26,8 @@
 	<div class="container">
 		<div class="content">
 			<div class="row">
-				<div class="offset4 span7">
-					<a href="/" class="brand"><?php echo ($this->config->item('application_logo')) ? sprintf('<img src="%s" alt="%s" />', $this->config->item('application_logo'), $this->config->item('application_name')) : $this->config->item('application_name'); ?></a>
+				<div class="offset3 span7">
+					<a href="<?php echo site_url(); ?>" class="brand"><?php echo ($this->config->item('application_logo')) ? sprintf('<img src="%s" alt="%s" />', $this->config->item('application_logo'), $this->config->item('application_name')) : $this->config->item('application_name'); ?></a>
 				</div>
 			</div>
 			<div class="row">
@@ -43,11 +39,4 @@
 		</div>
 	</div>
 	
-	<div id="onready" style="display:none;">
-		<?php if ($flash_message != ''): ?>
-			<div><?php echo ($flash_message); ?></div>
-		<?php endif; ?>
-	</div>
-	
-</body>
-</html>
+<?php require_once '_footer.inc.php'; ?>

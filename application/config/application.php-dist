@@ -6,6 +6,9 @@ $config['application_credit'] = 'Worldwide Widget';
 $config['application_logo'] = 'http://dummyimage.com/200x60/bababa/ffffff&text=LOGO';
 $config['application_locale'] = 'en_US';
 
+// PDF Generation Egnine
+$config['pdf_generator_path'] = '/usr/local/bin/wkhtmltopdf';
+
 // Contact Form
 $config['contact_email_recipient'] = 'user@example.com';
 

@@ -10,9 +10,10 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title><?php echo isset($page_title) ? $page_title . ' | ' . $this->config->item('application_name') : $this->config->item('application_name'); ?></title>
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/bootstrap.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/jquery.meow/jquery.meow.css'); ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/bootstrap.css'); ?>" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/jquery.meow/jquery.meow.css'); ?>" media="screen" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css'); ?>" media="all" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/print.css'); ?>" media="print" />
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 	<script src="<?php echo base_url('assets/bootstrap/js/bootstrap-modal.js'); ?>"> </script>

@@ -1,0 +1,10 @@
+/* Reduce Header Padding */
+body { padding-top: 10px; }
+
+/* Hide primary page elements */
+div.topbar { display: none; }
+input.btn, a.btn { display: none; }
+footer { display: none; }
+
+/* Show hidden elements */
+.print { display: block; }

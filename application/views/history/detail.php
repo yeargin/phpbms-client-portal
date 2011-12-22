@@ -1,4 +1,20 @@
-<h1 style="text-align:right;"><?php echo ($record->type); ?></h1>
+<div class="float:right;">
+	<h1 style="text-align:right;"><?php echo ($record->type); ?></h1>
+</div>
+<div class="row print">
+	<div class="span4">
+		<img src="<?php echo $this->config->item('application_logo'); ?>" alt="Logo" />
+	</div>
+	<div class="span4">
+		<p>
+			<?php echo ($settings['company_name']); ?><br />
+			<?php echo ($settings['company_address']); ?><br />
+			<?php echo ($settings['company_csz']); ?>
+		</p>
+	</div>
+</div>
+
+<div class="row print">&nbsp;</div>
 
 <table class="invoiceHeader">
 	<tr>
@@ -75,11 +91,16 @@
 			<td colspan="1" rowspan="<?php echo ($rowspan); ?>">
 				<p><strong>Status:</strong> <?php echo ($record->invoicestatus); ?> <?php echo date('F j, Y', strtotime($record->statusdate)); ?></p>
 				<p><?php echo ($record->printedinstructions); ?></p>
-				<?php if ($record->amountdue > 0): ?>
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
-				<p><a href="<?php echo site_url('payment'); ?>?payment_ref=<?php echo ($record->id); ?>&amp;payment_amount=<?php echo ($record->amountdue); ?>" class="btn primary">Pay Online</a></p>
-				<?php endif; ?>
+				<p>
+					<?php if ($record->amountdue > 0): ?>
+					<a href="<?php echo site_url('payment'); ?>?payment_ref=<?php echo ($record->id); ?>&amp;payment_amount=<?php echo ($record->amountdue); ?>" class="btn primary">Pay Online</a>
+					<?php endif; ?>
+					<?php if ($has_pdf): ?>
+					<a href="<?php echo site_url('history/pdf'); ?>?invoice_id=<?php echo ($record->id); ?>" class="btn secondary">Download PDF</a>
+					<?php endif; ?>
+				</p>
 			</td>
 			<td colspan="2" style="text-align:right;"><strong>Discount</strong></td>
 			<td class="decimal"><?php echo format_money($record->discountamount); ?></td>
