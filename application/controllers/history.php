@@ -121,6 +121,9 @@ class History extends CI_Controller {
 		$record->amountdue = ($record->totalti - $record->amountpaid);
 		$data['record'] = $record;
 		
+		// Not necessary, hidden by default in CSS
+		$data['has_pdf'] = false;
+		
 		// Load document as a variable to pass to PDF
 		$document = $this->load->view('history/print', $data, true);
 		
