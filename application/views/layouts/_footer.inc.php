@@ -1,6 +1,6 @@
 	<footer class="container">
 		<p>
-			Client Portal provied by <?php echo $this->config->item('application_credit'); ?>.
+			Client Portal provided by <?php echo $this->config->item('application_credit'); ?>.
 		</p>
 	</footer>
 	
