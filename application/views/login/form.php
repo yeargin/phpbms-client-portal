@@ -12,7 +12,7 @@
 		<div class="clearfix">
 			<?php echo form_label('Username', 'username'); ?>
 			<div class="input">
-				<?php echo form_input('username', $this->input->cookie('username')); ?>
+				<?php echo form_input('username', $this->input->cookie('remembered_username')); ?>
 			</div>
 		</div>
 
@@ -28,7 +28,7 @@
 			<div class="input">
 				<ul class="inputs-list"
 					<li>
-					<label><?php echo form_checkbox('save'); ?>	<span>Remember this login.</span></label>
+					<label><?php echo form_checkbox('remember_me', true); ?>	<span>Remember this login.</span></label>
 					</li>
 				</ul>
 			</div>

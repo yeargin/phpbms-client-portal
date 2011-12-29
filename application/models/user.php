@@ -11,6 +11,8 @@ class User extends CI_Model {
 		// If valid, set 'user' session variable. If not, clear it.
 		if($query->num_rows == 1):
 			$this->session->set_userdata('user', serialize(array_shift($query->result())));
+			if ($this->input->post('remember_me') == true)
+				$this->setUsernameCookie($this->input->post('username'));
 			return true;
 		else:
 			$this->session->unset_userdata('user');
@@ -54,6 +56,17 @@ class User extends CI_Model {
 	public function getUserByUuid($id) {
 		$query = $this->db->get_where('clients', array('uuid' => $id), 1);
 		return array_shift($query->result());
+	}
+
+	private function setUsernameCookie($username = null) {
+		$cookie = array(
+		    'name'   => 'remembered_username',
+		    'value'  => $username,
+		    'expire' => '1209600',
+		    'secure' => TRUE
+		);
+		$this->input->set_cookie($cookie);
+		return;
 	}
 
 }

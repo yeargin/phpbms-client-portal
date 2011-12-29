@@ -62,6 +62,14 @@
 
 &nbsp;<br />
 
+<?php if ($record->type != 'Invoice'): ?>
+
+<p class="alert-message info">
+	<strong><u>This is not an invoice</u>.</strong> No payment is due at this time.
+</p>
+
+<?php endif; ?>
+
 <table class="invoiceItems">
 	<thead>
 	<tr>
@@ -85,7 +93,7 @@
 	<?php endforeach; ?>
 	</tbody>
 
-	<?php if ($record->type != 'Quote'): $rowspan = 6; else: $rowspan = 5; endif; ?>
+	<?php if ($record->type == 'Invoice'): $rowspan = 6; else: $rowspan = 5; endif; ?>
 	<tfoot>
 	<tr>
 			<td colspan="1" rowspan="<?php echo ($rowspan); ?>">
@@ -94,7 +102,7 @@
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
 				<p>
-					<?php if ($record->amountdue > 0): ?>
+					<?php if ($record->amountdue > 0 && $record->type == 'Invoice'): ?>
 					<a href="<?php echo site_url('payment'); ?>?payment_ref=<?php echo ($record->id); ?>&amp;payment_amount=<?php echo ($record->amountdue); ?>" class="btn primary">Pay Online</a>
 					<?php endif; ?>
 					<?php if ($has_pdf): ?>
@@ -121,7 +129,7 @@
 			<td colspan="2" style="text-align:right;"><strong>Total</strong></td>
 			<td class="decimal"><?php echo format_money($record->totalti); ?></td>
 	</tr>
-<?php if ($record->type != 'Quote'): ?>
+<?php if ($record->type == 'Invoice'): ?>
 	<tr>
 			<td colspan="2" style="text-align:right;"><strong>Due</strong></td>
 			<td class="decimal"><?php echo format_money($record->amountdue); ?></td>

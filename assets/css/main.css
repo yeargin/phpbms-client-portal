@@ -13,6 +13,7 @@ body {
 
 .topbar input {
 	border: 0;
+	color: #999999;
 }
 .topbar input:hover {
 	color: #000000;

@@ -11,6 +11,9 @@ class Login extends CI_Controller
 	 * Index
 	 */
 	public function index() {
+		
+		$this->load->helper('cookie');
+		
 		$data['redirect'] = ($this->input->get('redirect')) ? $this->input->get('redirect') : '';
 		$this->load->view('login/form', $data);
 	}
